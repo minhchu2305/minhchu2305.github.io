@@ -1,0 +1,70 @@
+body {
+               background: rgb(100, 198, 205);
+               color: rgb(45, 45, 45);
+               padding: 10px;
+               font-family: arial;
+           }
+           header {
+               font-size: 1.5em;
+               font-weight: bold;
+           }
+           #all-contents {
+               max-width: 800px;
+               margin: auto;
+           }
+   
+           /* navigation menu */
+           nav {
+               background: rgb(100, 80, 41);
+               margin: 0 auto;
+               display: flex;
+               padding: 10px;
+               border-radius: 20px;
+               border-color:green;
+           }
+           nav header {
+               display: flex;
+               align-items: center;
+               color: rgb(205, 255, 255);
+               flex: 1;
+               border-color: blue;
+               border-radius: 20px;
+           }
+           nav ul {
+               list-style-image: none;
+           }
+           nav li {
+               display: inline-block;
+               padding: 0 10px;
+           }
+           nav a {
+               text-decoration: none;
+               color: #fff;
+           }
+   
+           /* main container area beneath menu */
+           main {
+               background: rgb(245, 238, 219);
+               display: flex;
+               border-color: blue;
+               border-radius:20px;
+           }
+           .sidebar {
+               margin-left: 15px;
+               padding: 5px;
+           }
+           .sidebar img {
+               width: 200px;
+               border-radius:20px;
+               
+               
+           }
+           .content {
+               flex: 1;
+               padding: 15px;
+               line-height: 1em;
+               
+           }
+           .interests header {
+               font-size: 1.25em;
+           }
