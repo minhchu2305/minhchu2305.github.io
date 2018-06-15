@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Bouncing Box</title>
     <script src="jquery.min.js"></script>
+   
 
 <!--     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -25,6 +26,7 @@
 
 </head>
 <body class="board">
+    
     <!-- HTML for the box -->
     <div class="box">?</div>
 
@@ -39,7 +41,8 @@
             var boardWidth;
             var update;
             var handleBoxClick;
-
+            var myFun;
+            
             // jQuery stuff setup for you
             box = $('.box');
             boardWidth = $('.board').width();
@@ -50,9 +53,11 @@
             var speed = 10;
             var direction;
             var click;
+            var boxcolor;
             direction = 1;
             box.css('left',position);
             box.text(points);
+            
 
             
             function update() {
@@ -69,7 +74,18 @@
                 // TODO 3 / 6 / 7 / 8
                 
             };
+            function myFun(){
+                var randcol= "";
+                var allchar="0123456789ABCDEF";
+                for(var i=0; i<6; i++){
+                randcol += allchar[Math.floor(Math.random()*16)];
 
+
+            }
+
+             document.body.style.backgroundColor= "#"+randcol;
+
+            };
 
             
             function handleBoxClick() {
@@ -77,15 +93,19 @@
                 position = 0;
                 points = points + 1;
                 box.text(points);
+                
+                
                 // TODO 4 / 5
                 
             };
+            
 
 
             //this calls update every 50 milliseconds
             setInterval(update, 50);
             // this calls the handle handleBoxClick function every time the box is clicked on
-            box.on('click', handleBoxClick);
+            box.on('click',handleBoxClick,);
+            box.on('click',myFun);
         })();
     </script>
 </body>
